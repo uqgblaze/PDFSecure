@@ -9,11 +9,14 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.6;
+			background-color: #f8f8f8;
+			padding: 0;
         }
         label {
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
+			color: #51247a;
         }
         input {
             width: 100%;
@@ -36,7 +39,50 @@
         }
         .preview-container {
             margin-top: 30px;
+			margin-top: 20px;
+     	 	border: 2px dotted #ddd;
+      		padding: 0px;
+      		max-width: 1200px;
+      		min-height: 500px;
         }
+		.subtitle {
+      		font-size: 0.8em;
+      		color: #999490;
+    	}
+		.pagetitle {
+			  max-width: 1200px;
+			  margin: 10px auto;
+			  width: 100%;
+			  padding: 5px 15px;
+			  box-sizing: border-box;
+			  background-color: #fff;
+			  border: 1px solid #ddd;
+    	}
+		.step1 {
+			  max-width: 1200px;
+			  margin: 10px auto;
+			  width: 100%;
+			  padding: 5px 15px;
+			  box-sizing: border-box;
+			  background-color: #fff;
+			  border: 1px solid #ddd;
+			  padding-bottom: 20px;
+			  padding-top: 10px;
+    	}
+		.step2 {
+			  max-width: 1200px;
+			  margin: 10px auto;
+			  width: 100%;
+			  padding: 5px;
+			  box-sizing: border-box;
+			  background-color: #fff;
+			  border: 1px solid #ddd;
+			  padding-bottom: 20px;
+			  padding-top: 10px;
+    	}
+		h1, h2{
+			color: #51247a;
+		}
         iframe {
             width: 100%;
             height: 600px;
@@ -46,7 +92,10 @@
     </style>
 </head>
 <body>
-    <h1>PDFSecure Generator</h1>
+	<div class="pagetitle">
+    <iframe title="PDFSecure Generator" aria-label="Heading titled PDFSecure Generator" height="150px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=PDFSecure%20Generator" frameborder="0" scrolling="no" style="max-width:1200px; max-height: 150px!important"></iframe>
+	</div>
+	<div class="step1">	
 	<h2>Step 1: Create the HTML file</h2>
 	<p>Use the form below to generate the HTML file, as <b>you'll need to upload and host this file somewhere else on the internet</b>. The title of the document and the URL to the PDF are required, while the Javascript and CSS Stylesheet are optional as you can either re-upload and insert in the URL of these files if you're having cross-platform issues, or want to customise the code yourself.</p>
     <form id="generator-form">
@@ -70,7 +119,8 @@
         <h2>Live Preview</h2>
         <iframe id="preview-frame" src="" style="border: 1px solid #ddd; padding: 10px;"></iframe>
     	</div>
-	
+	</div>
+	<div class="step2">
 	<h2>Step 2: Adjust your iframe code</h2>
 <p>Below is a form for you to adjust the iframe code to insert it into your site. You'll need to include the URL to the HTML file you downloaded and hosted somewhere else on the internet. Then, you can adjust the height and width of the iframe to suit the PDF.</p>
 <form id="iframe-form">
@@ -105,7 +155,7 @@
 		</p>
 
     </div>
-
+	</div>
 	<script>
   function generateIframeCode() {
     // Get the user inputs
