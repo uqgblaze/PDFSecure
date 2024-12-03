@@ -14,13 +14,11 @@
         }
         label {
             display: block;
-            margin-bottom: 10px;
             font-weight: bold;
 			color: #51247a;
         }
         input {
             width: 100%;
-            margin-bottom: 20px;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -100,24 +98,24 @@
 	<h2>Step 1: Create the HTML file</h2>
 	<p>Use the form below to generate the HTML file, as <b>you'll need to upload and host this file somewhere else on the internet</b>. The title of the document and the URL to the PDF are required, while the Javascript and CSS Stylesheet are optional as you can either re-upload and insert in the URL of these files if you're having cross-platform issues, or want to customise the code yourself.</p>
     <form id="generator-form">
-        <label for="title">Title of the Document:</label>
-        <input type="text" id="title" placeholder="Example PDFSecure" value="Example PDFSecure">
+        <p><label for="title">Title of the Document:</label>
+        <input type="text" id="title" placeholder="Example PDFSecure" value="Example PDFSecure"></p>
 
-        <label for="pdf-url">URL to PDF:</label>
-        <input type="text" id="pdf-url" placeholder="https://uqgblaze.github.io/PDFSecure/example.pdf" value="https://uqgblaze.github.io/PDFSecure/example.pdf">
+        <p><label for="pdf-url">URL to PDF:</label>
+        <input type="text" id="pdf-url" placeholder="https://uqgblaze.github.io/PDFSecure/example.pdf" value="https://uqgblaze.github.io/PDFSecure/example.pdf"></p>
 
-        <label for="js-url">URL to JavaScript (optional):</label>
-        <input type="text" id="js-url" placeholder="https://uqgblaze.github.io/PDFSecure/PDFSecure.js" value="https://uqgblaze.github.io/PDFSecure/PDFSecure.js">
+        <p><label for="js-url">URL to JavaScript (optional):</label>
+        <input type="text" id="js-url" placeholder="https://uqgblaze.github.io/PDFSecure/PDFSecure.js" value="https://uqgblaze.github.io/PDFSecure/PDFSecure.js"></p>
 
-        <label for="css-url">URL to CSS Stylesheet (optional):</label>
-        <input type="text" id="css-url" placeholder="https://uqgblaze.github.io/PDFSecure/PDFSecure-stylesheet.css" value="https://uqgblaze.github.io/PDFSecure/PDFSecure-stylesheet.css">
+        <p><label for="css-url">URL to CSS Stylesheet (optional):</label>
+        <input type="text" id="css-url" placeholder="https://uqgblaze.github.io/PDFSecure/PDFSecure-stylesheet.css" value="https://uqgblaze.github.io/PDFSecure/PDFSecure-stylesheet.css"></p>
 
         <button type="button" id="generate-btn">Generate Preview</button>
         <button type="button" id="download-btn">Download HTML File</button>
     </form>
 	
 	    <div class="preview-container">
-        <h2>Live Preview</h2>
+        <h2 style="padding-left: 5px;">Live Preview</h2>
         <iframe id="preview-frame" src="" style="border: 1px solid #ddd; padding: 10px;"></iframe>
     	</div>
 	</div>
@@ -155,7 +153,7 @@
 
     <div class="preview-container">
         <p>
-  		<label>Preview of the iFrame:</label><br>
+  		<label style="padding-left: 5px;">Preview of the iFrame:</label><br>
   		<div id="iframePreview" style="border: 1px solid #ddd; padding: 10px;"></div>
 		</p>
 
