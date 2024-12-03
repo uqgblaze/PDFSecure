@@ -74,20 +74,35 @@
         const previewFrame = document.getElementById('preview-frame');
 
         const generateHTML = () => {
-            const title = document.getElementById('title').value;
-            const pdfURL = document.getElementById('pdf-url').value;
-            const jsURL = document.getElementById('js-url').value;
-            const cssURL = document.getElementById('css-url').value;
+    const title = document.getElementById('title').value;
+    const pdfURL = document.getElementById('pdf-url').value;
+    const jsURL = document.getElementById('js-url').value;
+    const cssURL = document.getElementById('css-url').value;
 
-            return `
+    return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
+
+    <!-- Custom CSS URL-->
     <link rel="stylesheet" href="${cssURL}">
+
+    <!-- REQUIRED Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- REQUIRED PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"
+        integrity="sha512-U5C477Z8VvmbYAoV4HDq17tf4wG6HXPC6/KM9+0/wEXQQ13gmKY2Zb0Z2vu0VNUWch4GlJ+Tl/dfoLOH4i2msw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"><\/script>
+
+    <!-- Custom JavaScript URL-->
     <script src="${jsURL}" defer><\/script>
+
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     <\/script>
@@ -112,8 +127,9 @@
     </footer>
 </body>
 </html>
-            `;
-        };
+    `;
+};
+
 
         const updatePreview = () => {
             const htmlContent = generateHTML();
