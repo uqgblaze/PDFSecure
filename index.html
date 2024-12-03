@@ -65,6 +65,12 @@
         <button type="button" id="generate-btn">Generate Preview</button>
         <button type="button" id="download-btn">Download HTML File</button>
     </form>
+	
+	    <div class="preview-container">
+        <h2>Live Preview</h2>
+        <iframe id="preview-frame" src="" style="border: 1px solid #ddd; padding: 10px;"></iframe>
+    	</div>
+	
 	<h2>Step 2: Adjust your iframe code</h2>
 <p>Below is a form for you to adjust the iframe code to insert it into your site. You'll need to include the URL to the HTML file you downloaded and hosted somewhere else on the internet. Then, you can adjust the height and width of the iframe to suit the PDF.</p>
 <form id="iframe-form">
@@ -93,8 +99,11 @@
 
 
     <div class="preview-container">
-        <h2>Live Preview</h2>
-        <iframe id="preview-frame" src="" style="border: 1px solid #ddd; padding: 10px;"></iframe>
+        <p>
+  		<label>Preview of the iFrame:</label><br>
+  		<div id="iframePreview" style="border: 1px solid #ddd; padding: 10px;"></div>
+		</p>
+
     </div>
 
 	<script>
@@ -113,7 +122,7 @@
     }
 
     // Generate the iframe code
-    var iframeCode = `<iframe title="Secure PDF Viewer" aria-label="Embedded PDF Viewer" height="${height}" width="${width}" src="${htmlUrl}" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe>`;
+    var iframeCode = `<iframe title="Secure PDF Viewer" aria-label="Embedded PDF Viewer" height="${height}" width="${width}" src="${htmlUrl}" frameborder="0" scrolling="no"></iframe>`;
 
     // Display the iframe code in the textarea
     document.getElementById("iframeCodeOutput").value = iframeCode;
